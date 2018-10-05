@@ -2,7 +2,7 @@ var users = []
 var i = 0;
 
 var getData = (function($){
-	var URL = "https://api.github.com/repos/Showndarya/Hacktoberfest/commits?per_page=100"
+	var URL = "https://api.github.com/repos/Showndarya/Hacktoberfest/commits?per_page=500"
 	
 	$.get(URL,function(data,status) {
 
