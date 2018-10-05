@@ -31,7 +31,7 @@ An exhaustive collection of words as json files for easy access.
         "pleasing the senses or mind aesthetically",
         "of a very high standard; excellent"
     ],
-    "parts-of-speech": "Adjective",
+    "parts-of-speech": "Adjective"
 }
 ```
 
