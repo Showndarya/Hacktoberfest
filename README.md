@@ -4,7 +4,7 @@ An exhaustive collection of words as json files for easy access.
 
 ## How to contribute 
 
-> [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/Contribution.md)
+> [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/blob/master/Contribution.md)
 
 ## Create your first pull request :sunglasses:
 
