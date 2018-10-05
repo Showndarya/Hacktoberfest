@@ -4,11 +4,11 @@ An exhaustive collection of words as json files for easy access.
 
 ## How to contribute 
 
-> Refer to the template provided below to add your word.
+> Refer the template provided below to add your word.
 
-> Each word must be in a different file named <word-name>.json.
+> Each word must be in a different file named [your-word-name].json.
 
-> Add the word to an existing folder named after the starting letter of the word or create a folder.
+> Add the word to an existing folder corresponding to the starting letter of the word or create a folder.
 
 ## Create your first pull request :sunglasses:
 
