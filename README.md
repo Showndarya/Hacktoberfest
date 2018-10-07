@@ -1,3 +1,11 @@
+![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)
+![GitHub](https://img.shields.io/github/license/Showndarya/Hacktoberfest.svg)
+![GitHub forks](https://img.shields.io/github/forks/Showndarya/Hacktoberfest.svg)
+![GitHub issues](https://img.shields.io/github/issues/Showndarya/Hacktoberfest.svg)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Showndarya/Hacktoberfest.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/Showndarya/Hacktoberfest.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/Showndarya/Hacktoberfest.svg)
+
 # Vocabulary Builder :book:
 
 An exhaustive collection of words as json files for easy access.
