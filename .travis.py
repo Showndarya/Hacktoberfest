@@ -19,13 +19,13 @@ if changed_files:
         if re.search(r"\.json$", changed_file):
             changed_files_json.append(changed_file)
 
-
+ 
 # Iterate over list of changed JSON files.
 for changed_file_json in changed_files_json:
     print(f"Checking file {changed_file_json}...")
     there_was_an_error = False
 
-    if not changed_file_json[0].isupper():
+    if not os.path.basename(changed_file_json)[0].isupper():
         there_was_an_error = True
         print("🔥 File name not capitalized.")
 
