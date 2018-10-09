@@ -19,11 +19,16 @@ if changed_files:
         if re.search(r"\.json$", changed_file):
             changed_files_json.append(changed_file)
 
- 
+
 # Iterate over list of changed JSON files.
 for changed_file_json in changed_files_json:
     print(f"Checking file {changed_file_json}...")
     there_was_an_error = False
+
+    head, tail = os.path.split(changed_file_json)
+    if head[0] != tail[0]:
+        there_was_an_error = True
+        print("🔥 File is in the wrong folder.")
 
     if not os.path.basename(changed_file_json)[0].isupper():
         there_was_an_error = True
