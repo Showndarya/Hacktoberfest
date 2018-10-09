@@ -50,12 +50,6 @@ for changed_file_json in changed_files_json:
         there_was_an_error = True
         print("🔥 Value for 'word' appears to be empty.")
 
-    filename = tail.split('.')
-    wordinfile = filename.split('_')
-    if file_content["word"] != wordinfile[0]:
-        there_was_an_error = True
-        print("🔥 Name of word in filename and value for 'word' doesn't match.")
-
     if 'definitions' not in file_content:
         there_was_an_error = True
         print("🔥 Key 'definitions' not found.")
