@@ -34,7 +34,7 @@ for changed_file_json in changed_files_json:
             file_content = json.loads(data_file.read())
     except json.decoder.JSONDecodeError:
         there_was_an_error = True
-        print("🔥 JSON could not be parsed.")
+        print(f"🔥 JSON could not be parsed. Follow this link to know more : https://jsonlint.com/?json={data_file.read()}")
 
     if 'word' not in file_content:
         there_was_an_error = True
