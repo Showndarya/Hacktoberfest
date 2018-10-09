@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 import re
 import subprocess
@@ -49,6 +49,11 @@ for changed_file_json in changed_files_json:
     if not file_content["word"]:
         there_was_an_error = True
         print("🔥 Value for 'word' appears to be empty.")
+
+    filename = tail.split('.')
+    if file_content["word"] != filename[0]:
+	there_was_an_error = True
+        print("🔥 Name of word in filename and value for 'word' doesn't match.")
 
     if 'definitions' not in file_content:
         there_was_an_error = True
