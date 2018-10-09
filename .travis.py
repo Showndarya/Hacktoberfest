@@ -44,7 +44,9 @@ if changed_files:
     changed_files = changed_files.decode()
     for changed_file in changed_files.split('\n'):
         if re.search(r"\.json$", changed_file):
-            changed_files_json.append(changed_file)
+            # skip schema file from travis checks
+            if not changed_file == 'schema.json':
+                changed_files_json.append(changed_file)
 
 # To verify all files at once
 there_was_an_error = False
