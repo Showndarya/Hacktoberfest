@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Showndarya/Hacktoberfest.svg?branch=master)](https://travis-ci.org/Showndarya/Hacktoberfest)
 ![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)
 ![GitHub](https://img.shields.io/github/license/Showndarya/Hacktoberfest.svg)
 ![GitHub forks](https://img.shields.io/github/forks/Showndarya/Hacktoberfest.svg)
@@ -28,7 +29,7 @@ An exhaustive collection of words as json files for easy access.
 > [Create a pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
 
 ## Example file
-
+path: `B/Beautiful.json` (first letter needs to be capitalized)
 ```json
 {
     "word": "Beautiful",
