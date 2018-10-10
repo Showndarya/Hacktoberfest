@@ -1,0 +1,3 @@
+>>> print('Alice said \'How do you do?\'.\nBob replied, \'Very well thank you!\'')
+Alice said 'How do you do?'.
+Bob replied, 'Very well thank you!'
