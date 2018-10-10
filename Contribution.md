@@ -1,7 +1,9 @@
 # Contribution to Vocabulary Builder
 
 ## File Name
-Each word must be in a different file named [your-word-name].json.
+The name starts with a capital letter.
+One word per file.
+For instance : `[FIRST-LETTER]/[Word].json`
 
 ## File Path
 Add the word to an existing folder corresponding to the starting letter of the word or create a folder.
