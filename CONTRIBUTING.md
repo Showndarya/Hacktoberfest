@@ -1,4 +1,4 @@
-# Contribution to Vocabulary Builder
+# Contributions to Vocabulary Builder
 
 ## File Name
 The name starts with a capital letter.
