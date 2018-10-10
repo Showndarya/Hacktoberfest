@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",  //The $schema keyword is used to declare that a JSON fragment is actually a piece of JSON Schema. 
+  "$schema": "http://json-schema.org/schema#",
   "title": "Vocabulary",
   "type": "object",
   "required": [
