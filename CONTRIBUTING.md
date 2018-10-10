@@ -1,4 +1,4 @@
-# Contribution to Vocabulary Builder
+# Contributions to Vocabulary Builder
 
 ## File Name
 The name starts with a capital letter.
@@ -56,7 +56,7 @@ Add separate files of the word in different parts of speech. Name the file ```[(
     "definitions": [
         "definition-1",
 	"definition-2",
-	"definition-3",
+	"definition-3"
     ],
     "parts-of-speech": "parts-of-speeech-of-your-word"
 }
