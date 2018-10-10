@@ -55,16 +55,22 @@ there_was_an_error = False
 for changed_file_json in changed_files_json:
     print(f"Checking file {changed_file_json}...")
 
+    head, tail = os.path.split(changed_file_json)
+    if head[0] != tail[0]:
+        there_was_an_error = True
+        print("🔥 File is in the wrong folder.")
+
     if not os.path.basename(changed_file_json)[0].isupper():
         there_was_an_error = True
         print("🔥 File name not capitalized.")
 
     try:
         with open(changed_file_json) as data_file:
-            file_content = json.loads(data_file.read())
+            unparsed_file_content = data_file.read()
+            file_content = json.loads(unparsed_file_content)
     except json.decoder.JSONDecodeError:
         there_was_an_error = True
-        print(f"🔥 JSON could not be parsed. Follow this link to know more : https://jsonlint.com/?json={data_file.read()}")
+        print(f"🔥 JSON could not be parsed. Follow this link to know more : https://jsonlint.com/?json={unparsed_file_content}")
 
     errors = validate(file_content)
     if errors:
