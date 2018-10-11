@@ -14,7 +14,7 @@ An exhaustive collection of words as json files for easy access.
 
 ## How to contribute 
 
-> [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/blob/master/Contribution.md)
+> [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/blob/master/CONTRIBUTING.md)
 
 ## Create your first pull request :sunglasses:
 
@@ -40,6 +40,11 @@ path: `B/Beautiful.json` (first letter needs to be capitalized)
     "parts-of-speech": "Adjective"
 }
 ```
+
+## CLI for audio playback of words (Version 1)
+
+[SurpriseMe](https://github.com/Showndarya/Hacktoberfest/tree/master/Surprise_Me_Text_To_Audio_CLI) is a command line tool for providing audio playback to random words
+
 
 ## Hall of Fame :fire:
 
