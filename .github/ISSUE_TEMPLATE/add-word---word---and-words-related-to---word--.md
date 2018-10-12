@@ -1,10 +1,10 @@
 ---
-name: Add word "[Word]" and words related to "[Word]"
+name: :postbox: Add word "[Word]" and words related to "[Word]"
 about: Adding multiple words realted to theme
 
 ---
 
-Add word "[Word]" and words related to "[Word]"
+:postbox: Add word "[Word]" and words related to "[Word]"
 
 - [ ] Word1
 - [ ] Word1
