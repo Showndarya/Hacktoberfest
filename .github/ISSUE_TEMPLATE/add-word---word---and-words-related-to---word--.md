@@ -4,8 +4,6 @@ about: Adding multiple words realted to theme
 
 ---
 
-Add word "[Word]" and words related to "[Word]"
-
 - [ ] Word1
 - [ ] Word1
 - [ ] Word1

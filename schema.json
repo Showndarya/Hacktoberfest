@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",  //The $schema keyword is used to declare that a JSON fragment is actually a piece of JSON Schema. 
+  "$schema": "http://json-schema.org/schema#",
   "title": "Vocabulary",
   "type": "object",
   "required": [
@@ -10,7 +10,7 @@
   "properties": {
     "word": {
       "type": "string",
-      "pattern": "^[A-Z][a-z]+$"
+      "pattern": "^[A-Z][a-z]+([-_]*[A-Z]*[a-z]+)*$"
     },
     "definitions": {
       "type": "array",
@@ -29,7 +29,7 @@
         "Adjective",
         "Preposition",
         "Conjunction",
-        "Interjunction"
+        "Interjection"
       ]
     }
   },
