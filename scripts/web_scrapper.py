@@ -69,7 +69,11 @@ def parse_html(word, html_doc):
             "parts-of-speech": None
         }
 
-        part_of_speech = section.find('span').string.title()
+        try:
+            part_of_speech = section.find('span').string.title()
+        except Exception as e:
+            print("No string argument ", word)
+            continue
         if part_of_speech in PARTS_OF_SPEECH and part_of_speech not in found_pos:
             full_definition["word"] = word.title()
             full_definition["parts-of-speech"] = part_of_speech
@@ -139,8 +143,9 @@ def generate(input_words):
     for word in input_words:
         url = build_api_url(word)
         content = download_page(url)
-        for wdef in parse_html(word, content):
-            new_definitions[word.title() + "_" + wdef.get('parts-of-speech').lower()] = wdef
+        if content is not None:
+            for wdef in parse_html(word, content):
+                new_definitions[word.title() + "_" + wdef.get('parts-of-speech').lower()] = wdef
 
         print("processed ", word)
         time.sleep(3)  # just to be not suspicious :)
