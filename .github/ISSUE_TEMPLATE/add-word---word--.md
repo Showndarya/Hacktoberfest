@@ -1,5 +1,5 @@
 ---
-name: :mailbox: Add word "[Word]"
+name: Add word "[Word]"
 about: Adding specific words
 
 ---
