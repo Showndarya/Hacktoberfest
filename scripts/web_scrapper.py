@@ -79,7 +79,7 @@ def parse_html(word, html_doc):
             if part_of_speech not in found_pos:
                 print("Skipping, unknown part-of-speech: ", part_of_speech)
             else:
-                print("Word have more than one definition")
+                print("Word have more than one definition: ", word)
             continue
 
         def_parts = section.findAll("ul", {"class": "semb"})
@@ -90,6 +90,10 @@ def parse_html(word, html_doc):
                 defs = full_definition.get('definitions')
                 defs.append(wdef.string)
                 full_definition['definitions'] = defs
+
+        if len(full_definition.get('definitions')) == 0:
+            print("No definition found: ", word)
+            continue
 
         result.append(full_definition)
     return result
