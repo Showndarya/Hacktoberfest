@@ -1,5 +1,5 @@
 ---
-name: Add word "[Word]" and words related to "[Word]"
+name: Add word "[Procurement]" and words related to "[Procurement]"
 about: Adding multiple words realted to theme
 
 ---
