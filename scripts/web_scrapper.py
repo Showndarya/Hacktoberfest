@@ -252,9 +252,8 @@ def list_of_files(subfolder_names_string=None):
             # add only word to final list
             if '_' in json_file_name:
                 pass
-                # result_words.append(json_file_name.split('_')[0])
+                result_words.append(json_file_name.split('_')[0])
             else:
-                # print("FASFF")
                 result_words.append(json_file_name)
 
     return result_words
@@ -264,7 +263,7 @@ if __name__ == "__main__":
     words = ['your', 'list', 'of', 'word']
 
     words = list_of_files()
-    # print(words)
-    # print(len(words))
+    print(words)
+    print(len(words))
 
     # generate(words)
