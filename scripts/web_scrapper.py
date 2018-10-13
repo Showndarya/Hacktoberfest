@@ -72,24 +72,29 @@ def parse_html(word, html_doc):
             "parts-of-speech": None
         }
 
+        # parse part of speech
         try:
             part_of_speech = section.find('span').string.title()
         except Exception as e:
-            print("No string argument ", word)
+            print("No string argument for ", word)
+            cant_process.append((word, "Missing"))
             continue
+
+        # add parsed part of speech and word to model
         if part_of_speech in PARTS_OF_SPEECH and part_of_speech not in found_pos:
             full_definition["word"] = word.title()
             full_definition["parts-of-speech"] = part_of_speech
             found_pos.append(part_of_speech)
-
+        # non existing parts of speech
         else:
             if part_of_speech not in found_pos:
-                print("Skipping, unknown part-of-speech: ", part_of_speech)
+                print("Skipping, unknown part-of-speech: ", word, part_of_speech)
             else:
                 print("Word have more than one definition: ", word)
             cant_process.append((word, part_of_speech))
             continue
 
+        # parse definitions
         def_parts = section.findAll("ul", {"class": "semb"})
         for def_part in def_parts:
             wdefs = def_part.findAll("span", {"class": "ind"})
@@ -117,20 +122,22 @@ def create_json_file(word, definition):
 
     short_definition = os.path.join(subdir_path, word.split('_')[0] + ".json")
 
+    # rename old file name structure
     if os.path.exists(short_definition):
         with open(short_definition, 'r') as f:
             existing_def = json.load(f)
             new_pos = definition.get("parts-of-speech")
-            file_pos = existing_def.get("parts-of-speech")
+            file_pos = existing_def.get("parts-of-speech").title()
 
             if new_pos == file_pos:
                 update_defs(definition, existing_def)
                 print("Removing old definition format", word + ".json")
                 os.remove(short_definition)
 
+    # create if doesnt exist or update id exists
     if not os.path.exists(fname_path):
         with open(fname_path, 'w') as f:
-            print("Creating definition ", word + ".json")
+            print("Creating definition for ", word + ".json")
             json.dump(definition, f, indent=4)
     else:
         with open(fname_path, 'r') as f:
@@ -143,6 +150,9 @@ def create_json_file(word, definition):
 
 
 def update_defs(def_given, def_existing):
+    """
+    Updates existing definitions and add if new definition found
+    """
     new_defs = def_given.get("definitions")
     file_defs = def_existing.get("definitions")
 
@@ -156,6 +166,9 @@ def update_defs(def_given, def_existing):
 
 
 def similar(a, b):
+    """
+    String similarity check
+    """
     return SequenceMatcher(None, a, b).ratio()
 
 
@@ -174,7 +187,7 @@ def generate(input_words):
             results, couldnt_parse = parse_html(word, content)
 
             if len(couldnt_parse) > 0:
-                final_couldnt_parse.append(word)
+                final_couldnt_parse.append(couldnt_parse)
 
             for wdef in results:
                 acurate_fname = word.title() + "_" + wdef.get('parts-of-speech').lower()
@@ -190,7 +203,9 @@ def generate(input_words):
 
 
 def getListOfFiles(dirName):
-    # create a list of file and sub directories
+    """
+    Create a list of file and sub directories
+    """
     # names in the given directory
     listOfFile = os.listdir(dirName)
     allFiles = list()
@@ -224,15 +239,22 @@ def list_of_files(subfolder_names_string=None):
             filename, file_extension = os.path.splitext(path)
             json_file_name = filename.split('/')[-1]
 
+            # missing or wrong file extension
+            if file_extension != ".json":
+                new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + ".json")
+                os.rename(path, new_path)
+
             # rename filename if starts with lower letter
             if json_file_name[0].islower():
-                new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + file_extension)
+                new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + ".json")
                 os.rename(path, new_path)
 
             # add only word to final list
             if '_' in json_file_name:
-                result_words.append(json_file_name.split('_')[0])
+                pass
+                # result_words.append(json_file_name.split('_')[0])
             else:
+                # print("FASFF")
                 result_words.append(json_file_name)
 
     return result_words
@@ -242,8 +264,7 @@ if __name__ == "__main__":
     words = ['your', 'list', 'of', 'word']
 
     words = list_of_files()
-
-    print(words)
-    print(len(words))
+    # print(words)
+    # print(len(words))
 
     # generate(words)
