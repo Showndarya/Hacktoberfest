@@ -125,14 +125,18 @@ def create_json_file(word, definition):
     # rename old file name structure
     if os.path.exists(short_definition):
         with open(short_definition, 'r') as f:
-            existing_def = json.load(f)
-            new_pos = definition.get("parts-of-speech")
-            file_pos = existing_def.get("parts-of-speech").title()
+            try:
+                existing_def = json.load(f)
+                new_pos = definition.get("parts-of-speech")
+                file_pos = existing_def.get("parts-of-speech").title()
 
-            if new_pos == file_pos:
-                update_defs(definition, existing_def)
-                print("Removing old definition format", word + ".json")
-                os.remove(short_definition)
+                # rename and update
+                if new_pos == file_pos:
+                    update_defs(definition, existing_def)
+                    print("Removing old definition format", word + ".json")
+                    os.remove(short_definition)
+            except Exception as e:
+                print("ERROR reading file ", e)
 
     # create if doesnt exist or update id exists
     if not os.path.exists(fname_path):
@@ -140,13 +144,16 @@ def create_json_file(word, definition):
             print("Creating definition for ", word + ".json")
             json.dump(definition, f, indent=4)
     else:
-        with open(fname_path, 'r') as f:
-            existing_def = json.load(f)
-            existing_def = update_defs(definition, existing_def)
+        try:
+            with open(fname_path, 'r') as f:
+                existing_def = json.load(f)
+                existing_def = update_defs(definition, existing_def)
 
-            with open(fname_path, 'w') as file:
-                print("Updating definitions for ", word + ".json")
-                json.dump(existing_def, file, indent=4)
+                with open(fname_path, 'w') as file:
+                    print("Updating definitions for ", word + ".json")
+                    json.dump(existing_def, file, indent=4)
+        except Exception as e:
+            print("ERROR reading file ", e)
 
 
 def update_defs(def_given, def_existing):
@@ -244,6 +251,21 @@ def list_of_files(subfolder_names_string=None):
                 new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + ".json")
                 os.rename(path, new_path)
 
+            # bad structure
+            if '_' not in json_file_name:
+                try:
+                    with open(path, 'r') as f:
+                        file_pos = json.load(f).get("parts-of-speech")
+                        if isinstance(file_pos, str):
+                            new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + "_" + file_pos.lower() + ".json")
+                            os.rename(path, new_path)
+                        else:
+                            print("WRONG part of speech", type(file_pos), file_pos, json_file_name)
+
+                except Exception as e:
+                    print("ERROR reading file ", e)
+                    print("in file ", json_file_name)
+
             # rename filename if starts with lower letter
             if json_file_name[0].islower():
                 new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + ".json")
@@ -256,13 +278,31 @@ def list_of_files(subfolder_names_string=None):
             else:
                 result_words.append(json_file_name)
 
+
+
     return result_words
+
+
+def list_of_words_from_web(url):
+    """
+    Downloads all files by the given url
+    """
+    result = []
+
+    return result
+
 
 
 if __name__ == "__main__":
     words = ['your', 'list', 'of', 'word']
 
     words = list_of_files()
+    # words = list_of_files("CD")
+    # words = list_of_files("FGHJK")
+    # words = list_of_files("LMNP")
+    # words = list_of_files("QRST")
+    # words = list_of_words()
+
     print(words)
     print(len(words))
 
