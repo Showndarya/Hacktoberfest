@@ -23,6 +23,8 @@ import requests
 import time
 
 from bs4 import BeautifulSoup
+from difflib import SequenceMatcher
+from string import ascii_uppercase
 
 OXFORD_URL = "https://en.oxforddictionaries.com/definition/"
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -56,6 +58,7 @@ def parse_html(word, html_doc):
     """
     result = list()
     found_pos = []
+    cant_process = []
 
     soup = BeautifulSoup(html_doc, 'html.parser')
 
@@ -84,6 +87,7 @@ def parse_html(word, html_doc):
                 print("Skipping, unknown part-of-speech: ", part_of_speech)
             else:
                 print("Word have more than one definition: ", word)
+            cant_process.append((word, part_of_speech))
             continue
 
         def_parts = section.findAll("ul", {"class": "semb"})
@@ -100,7 +104,7 @@ def parse_html(word, html_doc):
             continue
 
         result.append(full_definition)
-    return result
+    return result, cant_process
 
 
 def create_json_file(word, definition):
@@ -111,6 +115,19 @@ def create_json_file(word, definition):
     subdir_path = os.path.join(ROOT_DIR, first_letter)
     fname_path = os.path.join(subdir_path, word + ".json")
 
+    short_definition = os.path.join(subdir_path, word.split('_')[0] + ".json")
+
+    if os.path.exists(short_definition):
+        with open(short_definition, 'r') as f:
+            existing_def = json.load(f)
+            new_pos = definition.get("parts-of-speech")
+            file_pos = existing_def.get("parts-of-speech")
+
+            if new_pos == file_pos:
+                update_defs(definition, existing_def)
+                print("Removing old definition format", word + ".json")
+                os.remove(short_definition)
+
     if not os.path.exists(fname_path):
         with open(fname_path, 'w') as f:
             print("Creating definition ", word + ".json")
@@ -118,19 +135,28 @@ def create_json_file(word, definition):
     else:
         with open(fname_path, 'r') as f:
             existing_def = json.load(f)
-            new_defs = definition.get("definitions")
-            file_defs = existing_def.get("definitions")
-
-            # check if definitions are not the same
-            for wdef in new_defs:
-                if wdef not in file_defs:
-                    file_defs.append(wdef)
-
-            existing_def["definitions"] = file_defs
+            existing_def = update_defs(definition, existing_def)
 
             with open(fname_path, 'w') as file:
                 print("Updating definitions for ", word + ".json")
                 json.dump(existing_def, file, indent=4)
+
+
+def update_defs(def_given, def_existing):
+    new_defs = def_given.get("definitions")
+    file_defs = def_existing.get("definitions")
+
+    # check if definitions are not the same
+    for wdef in new_defs:
+        if similar(wdef, file_defs) > 0.9:
+            file_defs.append(wdef)
+
+    def_existing["definitions"] = file_defs
+    return def_existing
+
+
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
 
 
 def generate(input_words):
@@ -138,14 +164,21 @@ def generate(input_words):
     Function returns definitions of inputed words
     """
     new_definitions = {}
+    final_couldnt_parse = []
     print("Starting... ")
 
     for word in input_words:
         url = build_api_url(word)
         content = download_page(url)
         if content is not None:
-            for wdef in parse_html(word, content):
-                new_definitions[word.title() + "_" + wdef.get('parts-of-speech').lower()] = wdef
+            results, couldnt_parse = parse_html(word, content)
+
+            if len(couldnt_parse) > 0:
+                final_couldnt_parse.append(word)
+
+            for wdef in results:
+                acurate_fname = word.title() + "_" + wdef.get('parts-of-speech').lower()
+                new_definitions[acurate_fname] = wdef
 
         print("processed ", word)
         time.sleep(3)  # just to be not suspicious :)
@@ -153,7 +186,64 @@ def generate(input_words):
     for word, definition in new_definitions.items():
         create_json_file(word, definition)
 
+    print("Couldnt parse files, try manually", final_couldnt_parse)
+
+
+def getListOfFiles(dirName):
+    # create a list of file and sub directories
+    # names in the given directory
+    listOfFile = os.listdir(dirName)
+    allFiles = list()
+    # Iterate over all the entries
+    for entry in listOfFile:
+        # Create full path
+        fullPath = os.path.join(dirName, entry)
+        # If entry is a directory then get the list of files in this directory
+        if os.path.isdir(fullPath):
+            allFiles = allFiles + getListOfFiles(fullPath)
+        else:
+            allFiles.append(fullPath)
+
+    return allFiles
+
+
+def list_of_files(subfolder_names_string=None):
+    """
+    Returns list of file names from dirs A to Z or other if specified
+    :param subfolder_names_string: "ABCDMNOXYZ" or other sequence
+    """
+    result_words = list()
+
+    if subfolder_names_string is None:
+        subfolder_names_string = ascii_uppercase
+
+    for c in subfolder_names_string:
+        w = getListOfFiles(os.path.join(ROOT_DIR, c))
+
+        for path in w:
+            filename, file_extension = os.path.splitext(path)
+            json_file_name = filename.split('/')[-1]
+
+            # rename filename if starts with lower letter
+            if json_file_name[0].islower():
+                new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + file_extension)
+                os.rename(path, new_path)
+
+            # add only word to final list
+            if '_' in json_file_name:
+                result_words.append(json_file_name.split('_')[0])
+            else:
+                result_words.append(json_file_name)
+
+    return result_words
+
 
 if __name__ == "__main__":
     words = ['your', 'list', 'of', 'word']
-    generate(words)
+
+    words = list_of_files()
+
+    print(words)
+    print(len(words))
+
+    # generate(words)
