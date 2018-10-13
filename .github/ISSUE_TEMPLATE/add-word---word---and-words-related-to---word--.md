@@ -1,5 +1,5 @@
 ---
-name: Add word "[Word]" and words related to "[Word]"
+name: Add word "[Hacktoberfest]" and words related to "[Hacktoberfest]"
 about: Adding multiple words realted to theme
 
 ---
