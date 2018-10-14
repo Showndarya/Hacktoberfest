@@ -128,7 +128,7 @@ def parse_html(word, html_doc):
 
 
 total_added = 0
-BATCH_ADDING = 1
+BATCH_ADDING = 50
 
 def create_files():
     print('to be created len', len(to_be_created))
@@ -273,6 +273,7 @@ def generate(input_words):
         time.sleep(randrange(4, 9) * 0.12)  # just to be not suspicious :)
 
 
+
 def getListOfFiles(dirName):
     """
     Create a list of file and sub directories
@@ -399,16 +400,6 @@ def fix_json_files(path, skip_fixes):
         except Exception as e:
             print("ERROR reading file ", e, "in file ", json_file_name)
             raise Exception(e)
-
-
-        # try:
-        #     if os.path.exists(path):
-        #         with open(path, 'w') as file:
-        #             print("Updating definitions for ", word + ".json")
-        #             json.dump(definition, file, indent=4)
-        # except Exception as e:
-        #     print("Read/Write error", e)
-
 
     # add only word to final list
     if '_' in json_file_name:
