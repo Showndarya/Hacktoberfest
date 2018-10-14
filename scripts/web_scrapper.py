@@ -125,10 +125,8 @@ def parse_html(word, html_doc):
         result.append(full_definition)
     return result
 
-
-
 total_added = 0
-BATCH_ADDING = 50
+BATCH_ADDING = 20
 
 def create_files():
     print('to be created len', len(to_be_created))
@@ -261,8 +259,12 @@ def generate(input_words):
         word = input_words[i]
         url = build_api_url(word)
         content = download_page(url)
+
         if content is not None:
             results = parse_html(word, content)
+
+            if len(results) == 0:
+                no_definition.add(word)
 
             for wdef in results:
                 acurate_fname = word.title() + "_" + wdef.get('parts-of-speech').lower()
@@ -364,13 +366,8 @@ def fix_json_files(path, skip_fixes):
             print("ERROR reading file ", e)
             print("in file ", json_file_name)
 
-
         # Fix content of file
         try:
-            # print(path)
-
-
-
             with open(path, 'r') as f:
                 file_def = json.load(f)
 
