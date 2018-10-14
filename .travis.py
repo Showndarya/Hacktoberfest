@@ -65,9 +65,10 @@ for changed_file_json in changed_files_json:
         print("🔥 File name not capitalized.")
 
     try:
-        with open(changed_file_json) as data_file:
-            unparsed_file_content = data_file.read()
-            file_content = json.loads(unparsed_file_content)
+        if os.path.exists(changed_file_json):
+            with open(changed_file_json) as data_file:
+                unparsed_file_content = data_file.read()
+                file_content = json.loads(unparsed_file_content)
     except json.decoder.JSONDecodeError:
         there_was_an_error = True
         print(f"🔥 JSON could not be parsed. Follow this link to know more : https://jsonlint.com/?json={unparsed_file_content}")
