@@ -301,7 +301,7 @@ def list_of_files(subfolder_names_string, skip_fixes):
     result_words = list()
 
     for c in subfolder_names_string:
-        w = getListOfFiles(os.path.join(ROOT_DIR, c))
+        w = getListOfFiles(os.path.join(ROOT_DIR, c.upper()))
 
         for path in w:
             word = fix_json_files(path, skip_fixes=skip_fixes)
@@ -345,6 +345,48 @@ def fix_json_files(path, skip_fixes):
         if json_file_name[0].islower():
             new_path = os.path.join(os.path.dirname(filename), json_file_name.title() + ".json")
             os.rename(path, new_path)
+
+        # # Fix content of file
+        try:
+            with open(path, 'r') as f:
+                file_def = json.load(f)
+
+                file_word = file_def.get('word').title()
+                if isinstance(file_word, str):
+                    file_def['word'] = file_word
+                else:
+                    print("WRONG TYPE OF word", type(file_word), file_word)
+
+                file_pos = file_def.get('parts-of-speech').title()
+                if isinstance(file_pos, str) and file_pos in PARTS_OF_SPEECH:
+                    file_def['parts-of-speech'] = file_pos
+                else:
+                    print("WRONG TYPE OF part-of-speech", type(file_pos), file_pos, file_word)
+
+                file_defs = file_def.get('definitions')
+                if isinstance(file_defs, list) :
+                    if len(file_defs) == 0:
+                        print("EMPTY DEFINITIONS", file_defs, file_word)
+                else:
+                    print("WRONG TYPE OF definitions", type(file_defs), file_defs, file_word)
+
+                with open(path, 'w') as fw:
+                    # print("Writing", file_def)
+                    json.dump(file_def, fw, indent=4)
+
+        except Exception as e:
+            print("ERROR reading file ", e, "in file ", json_file_name)
+            raise Exception(e)
+
+
+        # try:
+        #     if os.path.exists(path):
+        #         with open(path, 'w') as file:
+        #             print("Updating definitions for ", word + ".json")
+        #             json.dump(definition, file, indent=4)
+        # except Exception as e:
+        #     print("Read/Write error", e)
+
 
     # add only word to final list
     if '_' in json_file_name:
@@ -424,15 +466,19 @@ def load_from_file_with_diff():
 
 
 if __name__ == "__main__":
-    # words = ['your', 'list', 'of', 'word']
+    words = ['your', 'list', 'of', 'word']
 
     # words = list_of_files('W')
     #
     # print(words)
     # print(len(words))
 
-    # finite = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-    #           'v', 'w', 'x', 'y', 'z']
+    finite = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'w', 'x', 'y', 'z']
+
+    words = list_of_files(finite, False)
+
+    # print(words)
+    print(len(words))
 
     # words = list_of_words_from_web(finite, diff=True)
 
@@ -440,10 +486,10 @@ if __name__ == "__main__":
     #     for item in words:
     #         f.write("%s\n" % item)
 
-    words = load_from_file_with_diff()
-
-    print(len(words))
-    generate(words)
+    # words = load_from_file_with_diff()
+    #
+    # print(len(words))
+    # generate(words)
 
     # words = list_of_files("CD")
     # words = list_of_files("FGHJK")
