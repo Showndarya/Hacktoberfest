@@ -126,7 +126,7 @@ def parse_html(word, html_doc):
     return result
 
 total_added = 0
-BATCH_ADDING = 20
+BATCH_ADDING = 1
 
 def create_files():
     print('to be created len', len(to_be_created))
@@ -270,6 +270,8 @@ def generate(input_words):
                 acurate_fname = word.title() + "_" + wdef.get('parts-of-speech').lower()
                 # new_definitions[acurate_fname] = wdef
                 create_json_file(acurate_fname, wdef)
+        else:
+            no_definition.add(word)
 
         print(str(i + 1) + "/" + str(len(input_words) + 1), "processed", word)
         time.sleep(randrange(4, 9) * 0.12)  # just to be not suspicious :)
@@ -456,20 +458,20 @@ def load_from_file_with_diff():
     try:
         with open('cant_process.txt', 'r') as cant_process, open('words_from_web.txt', 'r') as from_web, open('created.txt', 'r') as already_created, open('no_definition.txt', 'r') as no_def, open('multiple_def.txt', 'r') as mult_def, open('unknow_pos.txt','r') as unknow_pos:
             for item in from_web.read().strip().split('\n'):
-                words.add(item)
+                words.add(item.lower())
 
             print(len(words))
 
             for item in already_created.read().strip().split('\n'):
-                words.discard(item)
+                words.discard(item.lower())
             for item in unknow_pos.read().strip().split('\n'):
-                words.discard(item)
+                words.discard(item.lower())
             for item in mult_def.read().strip().split('\n'):
-                words.discard(item)
+                words.discard(item.lower())
             for item in no_def.read().strip().split('\n'):
-                words.discard(item)
+                words.discard(item.lower())
             for item in cant_process.read().strip().split('\n'):
-                words.discard(item)
+                words.discard(item.lower())
         return words
     except:
         print("Input files doesnt exists")
