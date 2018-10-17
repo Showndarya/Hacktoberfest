@@ -1,0 +1,78 @@
+// C++ program to print all topological sorts of a graph 
+#include <bits/stdc++.h> 
+using namespace std; 
+  
+int v, e;
+vector<int> arr[1000];
+vector<int> rev[1000];
+int visited[1000];
+stack<int> stk;
+
+void dfs(int i) {
+    
+    visited[i] = 1;
+    vector<int> nbr = arr[i];
+    
+    for(int j=0;j<nbr.size();j++) {
+        if(visited[nbr[j]] == 0) {
+            dfs(nbr[j]);
+        }
+    }
+    
+    stk.push(i);
+}
+
+void printDfs(int i) {
+    
+    visited[i] = 1;
+    
+    cout << i << " -> ";
+    vector<int> nbr = rev[i];
+    
+    for(int j=0;j<nbr.size();j++) {
+        if(visited[nbr[j]] == 0) {
+            printDfs(nbr[j]);
+        }
+    }
+}
+
+void kosaraju() {
+    
+    for(int i=0;i<v;i++){
+        if(visited[i]==0){
+            dfs(i);
+        }
+    }
+    
+    for(int i=0;i<v;i++) {
+        visited[i]=0;
+    }
+    
+    while(!stk.empty()) {
+        int next = stk.top();
+        if(visited[next] == 0) {
+            printDfs(next);
+            cout << endl;   
+        }
+        stk.pop();
+    }
+}
+
+int main() 
+{ 
+    cin >> v >> e;
+    int a,b;
+    for(int i=0;i<e;i++) {
+        cin >> a >> b;
+        arr[a].push_back(b);
+        rev[b].push_back(a);        
+    }
+    
+    for(int i=0;i<v;i++) {
+        visited[i]=0;
+    }
+    
+    kosaraju();
+    
+    return 0; 
+} 
