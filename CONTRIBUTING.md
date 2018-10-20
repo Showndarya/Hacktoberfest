@@ -13,7 +13,7 @@ Add the word to an existing folder corresponding to the starting letter of the w
 The file must contain 3 keys
 
 ```
-word: Your word 
+word: Awesomeness  
 ```
 
 ``` 
@@ -40,9 +40,9 @@ Add separate files of the word in different parts of speech. Name the file ```[(
 
 ```json
 {
-    "word": "your-word",
+    "word": "Awesomeness",
     "definitions": [
-        "definition"
+        "Something wow"
     ],
     "parts-of-speech": "parts-of-speeech-of-your-word"
 }
