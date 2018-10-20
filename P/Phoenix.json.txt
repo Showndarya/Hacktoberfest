@@ -1,0 +1,8 @@
+{
+    "word": "Phoenix",
+    "definitions": [
+        "(in classical mythology) a unique bird that lived for five or six centuries in the Arabian desert, after this time burning itself on a funeral pyre and rising from the ashes with renewed youth to live through another cycle.",
+        "It teaches us to never give up"
+    ],
+    "parts-of-speech": "Noun"
+}
