@@ -1,0 +1,7 @@
+node_modules/
+dist/
+SurpriseMe.egg-info/
+build/
+virtual/
+__pycache__/
+__init__.pyc
