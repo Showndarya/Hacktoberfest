@@ -1,0 +1,9 @@
+{
+    "word": "Associative",
+    "definitions": [
+        "Of or involving the association of things.",
+        "Of or denoting computer storage in which items are identified by content rather than by address.",
+        "Involving the condition that a group of quantities connected by operators gives the same result whatever their grouping, i.e. in whichever order the operations are performed, as long as the order of the quantities remains the same, e.g. (a \u00d7 b) \u00d7 c = a \u00d7 (b \u00d7 c)."
+    ],
+    "parts-of-speech": "Adjective"
+}
