@@ -1,0 +1,8 @@
+{
+    "word": "Eigenvalue",
+    "definitions": [
+        "Each of a set of values of a parameter for which a differential equation has a non-zero solution (an eigenfunction) under given conditions.",
+        "Any number such that a given matrix minus that number times the identity matrix has zero determinant."
+    ],
+    "parts-of-speech": "Noun"
+}
