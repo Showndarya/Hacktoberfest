@@ -1,0 +1,8 @@
+{
+    "word": "And",
+    "definitions": [
+        "A Boolean operator which gives the value one if and only if all the operands are one, and otherwise has a value of zero.",
+        "A circuit which produces an output signal only when signals are received simultaneously through all input connections."
+    ],
+    "parts-of-speech": "Noun"
+}
