@@ -1,0 +1,8 @@
+{
+    "word": "Not",
+    "definitions": [
+        "A Boolean operator with only one variable that has the value one when the variable is zero and vice versa.",
+        "A circuit which produces an output signal only when there is not a signal on its input."
+    ],
+    "parts-of-speech": "Noun"
+}
