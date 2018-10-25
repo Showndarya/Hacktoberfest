@@ -1,0 +1,7 @@
+{
+    "word": "Energy",
+    "definitions": [
+        "the strength and vitality required for sustained physical or mental activity."
+    ],
+    "parts-of-speech": "Verb"
+}
