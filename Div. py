@@ -1,0 +1,6 @@
+no=input("enter the number")
+if(no%5==0):
+   print"true"
+   else
+   print"false"
+   
