@@ -1,0 +1,7 @@
+{
+    "word": "Javabean",
+    "definitions": [
+        "A reusable class in the Java programming language that typically contains numerous objects. A JavaBean allows objects to be contained within a single object, called the bean, which makes it easier to share and reuse the code."
+    ],
+    "parts-of-speech": "Noun"
+}
