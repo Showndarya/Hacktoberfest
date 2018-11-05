@@ -13,8 +13,8 @@ for dir_name in dir_list:
 
             if file.islower():
                 new_name = os.path.join(subdir, file.capitalize())
-                print('================================')
+                print('=================================')
                 print(f'Old filename {old_name}')
                 print(f'New filename {new_name}')
-                print('================================')
+                print('=================================')
                 os.rename(old_name, new_name)
