@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var xhr = new XMLHttpRequest();
+        function onLoard()
+        {
+        xhr.open("GET","userss.json",true);
+        xhr.send();
+        xhr.onreadystatechange = function()
+        {
+            if(this.readyState == 4)
+            {
+                if(this.status == 200)
+                {
+                    var rps = JSON.parse(this.responseText);
+                    var output = "";
+                    for(i=0;i<rps.length;i++)
+                    {
+                        output += "<br>" + "ID: " + rps[i].id + "<br>" +
+                                    "Name: " + rps[i].name + "<br>" +
+                                    "City: " + rps[i].city + "<br>" ;
+                        document.getElementById('user').innerHTML = output;
+                    }
+                }
+            }
+        }
+        }
+    
+    </script>
+</head>
+<body>
+    <button onclick="onLoard()">Click me</button>
+    <h1>USERs</h1>
+    <div id=user></div>
+</body>
+</html>
