@@ -40,11 +40,11 @@ Add separate files of the word in different parts of speech. Name the file ```[(
 
 ```json
 {
-    "word": "your-word",
+    "word": "kakidrosis",
     "definitions": [
-        "definition"
+        "The medical name for smelly sweat."
     ],
-    "parts-of-speech": "parts-of-speeech-of-your-word"
+    "parts-of-speech": "Noun"
 }
 ```
 
