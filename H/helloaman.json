@@ -1,0 +1,15 @@
+    "heap": {
+        "objects": [
+            {
+                "name": "Hello",
+                "type": "StaticResponseHandler",
+                "config": {
+                    "status": 200,
+                    "entity": "<html><body><h1>Hello World</h1></body></html>"
+                }
+            }
+        ]
+    },
+    "condition": "${matches(exchange.request.uri.path, '^/hello')}",
+    "handler": "Hello"
+}
