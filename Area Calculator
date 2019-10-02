@@ -1,0 +1,10 @@
+print ("Hi. The name's Bond. James Bond.")
+print ("My cruise for my upcoming mission is just 2 minutes away. Till then, I depend on you to keep occupied.")
+print ("So let's focus on my math. You'll give me the base and height of the triangle and I'll calculate the area.")
+base = int(input("Enter the length of base"))
+height = int(input('Enter the length of height'))
+area = 0.5*base*height
+print ("Well, the area is {} square unit." .format(area))
+print ("Looks like my cruise is here")
+print("See you later.")
+
