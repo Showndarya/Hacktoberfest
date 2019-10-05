@@ -51,3 +51,5 @@ path: `B/Beautiful.json` (first letter needs to be capitalized)
 ## Hall of Fame :fire:
 
 Check out the [Hall of Fame](https://showndarya.github.io/Hacktoberfest/Contributors_Page_Source/) for a list of contributors with a minimum of one commit with their gravatar. To know more about a contributor, click on the gravatar to go to their github profile.
+
+## hacktoberfest 2020
