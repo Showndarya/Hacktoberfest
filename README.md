@@ -8,17 +8,17 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/Showndarya/Hacktoberfest.svg)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Showndarya/Hacktoberfest.svg)](http://isitmaintained.com/project/Showndarya/Hacktoberfest "Average time to resolve an issue")
 
-# Vocabulary Builder :book:
+# Vocabulary Builder: :book:
 
 An exhaustive collection of words as json files for easy access.
 
 
-## How to contribute 
+## How to contribute:
 
 > [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/blob/master/CONTRIBUTING.md)
 
 
-## Create your first pull request :sunglasses:
+## Create your first pull request: :sunglasses:
 
 > [Fork this repository](https://help.github.com/articles/fork-a-repo/)
 
@@ -30,7 +30,7 @@ An exhaustive collection of words as json files for easy access.
 
 > [Create a pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
 
-## Example file 🎃
+## Example file: 🎃
 path: `B/Beautiful.json` (first letter needs to be capitalized)
 ```json
 {
@@ -48,6 +48,6 @@ path: `B/Beautiful.json` (first letter needs to be capitalized)
 [SurpriseMe](https://github.com/Showndarya/Hacktoberfest/tree/master/Surprise_Me_Text_To_Audio_CLI) is a command line tool for providing audio playback to random words
 
 
-## Hall of Fame :fire:
+## Hall of Fam:e: :fire:
 
 Check out the [Hall of Fame](https://showndarya.github.io/Hacktoberfest/Contributors_Page_Source/) for a list of contributors with a minimum of one commit with their gravatar. To know more about a contributor, click on the gravatar to go to their github profile.
