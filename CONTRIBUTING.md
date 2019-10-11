@@ -64,3 +64,4 @@ Add separate files of the word in different parts of speech. Name the file ```[(
 ## Addressing an Issue
 
 If the word you want to add is requested in an issue, leave a comment on the issue claiming that you are adding that word. This minimizes conflicts and time wasting.
+[hefeholuwa](github.com/hefeholuwa)
