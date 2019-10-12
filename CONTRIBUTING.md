@@ -40,11 +40,11 @@ Add separate files of the word in different parts of speech. Name the file ```[(
 
 ```json
 {
-    "word": "your-word",
+    "word": "sort",
     "definitions": [
-        "definition"
+        "to arrange something in a particular order eitheer ascending or descending order"
     ],
-    "parts-of-speech": "parts-of-speeech-of-your-word"
+    "parts-of-speech": "verb"
 }
 ```
 
