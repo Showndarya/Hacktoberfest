@@ -10,7 +10,7 @@
   "properties": {
     "word": {
       "type": "string",
-      "pattern": "^[A-Z][a-z]+([-_]*[A-Z]*[a-z]+)*$"
+      "pattern": "^[A-Z][a-z]?([-_]*[A-Z]*[a-z]+)*$"
     },
     "definitions": {
       "type": "array",

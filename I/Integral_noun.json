@@ -1,0 +1,8 @@
+{
+    "word": "Integral",
+    "definitions": [
+        "A function of which a given function is the derivative, i.e. which yields that function when differentiated, and which may express the area under the curve of a graph of the function.",
+        "A function satisfying a given differential equation."
+    ],
+    "parts-of-speech": "Noun"
+}
