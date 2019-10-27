@@ -1,3 +1,4 @@
+#importing required libraries
 import json
 import operator
 import os
@@ -5,7 +6,6 @@ import re
 import subprocess
 
 from jsonschema import Draft4Validator
-
 
 def validate(vocabulary):
 
@@ -80,3 +80,4 @@ for changed_file_json in changed_files_json:
 
 if there_was_an_error:
     exit(1)
+#end
