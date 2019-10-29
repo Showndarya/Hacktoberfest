@@ -2,7 +2,7 @@ var users = []
 var i = 0
 
 var getData = (function ($) {
-  var URL = 'https://api.github.com/repos/Showndarya/Hacktoberfest/contributors'
+  const URL = 'https://api.github.com/repos/Showndarya/Hacktoberfest/contributors'
 
   $.get(URL, function (data, status) {
     data.forEach(function (d) {
