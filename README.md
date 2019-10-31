@@ -13,7 +13,7 @@
 An exhaustive collection of words as json files for easy access.
 
 
-## How to contribute 
+## How to contribute :fire::fire::fire:
 
 > [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/blob/master/CONTRIBUTING.md)
 
