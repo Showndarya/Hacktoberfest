@@ -7,6 +7,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/Showndarya/Hacktoberfest.svg)
 ![GitHub top language](https://img.shields.io/github/languages/top/Showndarya/Hacktoberfest.svg)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Showndarya/Hacktoberfest.svg)](http://isitmaintained.com/project/Showndarya/Hacktoberfest "Average time to resolve an issue")
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
 # Vocabulary Builder :book:
 
