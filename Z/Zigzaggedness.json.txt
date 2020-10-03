@@ -1,0 +1,6 @@
+{
+	"word": "Zigzaggedness",
+	"definitions": [
+		"the quality or state of being zigzag"
+	],
+	"parts-of-speech": "noun"
