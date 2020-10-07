@@ -1,0 +1,53 @@
+{
+  "word": "snowflake",
+  "results": [
+    {
+      "definition": "a crystal of snow",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "flake"
+      ],
+      "typeOf": [
+        "crystal"
+      ],
+      "partOf": [
+        "snowfall",
+        "snow"
+      ],
+      "hasSubstances": [
+        "water",
+        "h2o"
+      ],
+      "substanceOf": [
+        "snow"
+      ]
+    },
+    {
+      "definition": "white Arctic bunting",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "plectrophenax nivalis",
+        "snow bunting",
+        "snowbird"
+      ],
+      "typeOf": [
+        "bunting"
+      ],
+      "memberOf": [
+        "plectrophenax",
+        "genus plectrophenax"
+      ]
+    }
+  ],
+  "syllables": {
+    "count": 2,
+    "list": [
+      "snow",
+      "flake"
+    ]
+  },
+  "pronunciation": {
+    "all": "'snoʊ,fleɪk"
+  },
+  "frequency": 2.85
+}

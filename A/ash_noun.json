@@ -1,0 +1,102 @@
+{
+  "word": "ash",
+  "results": [
+    {
+      "definition": "any of various deciduous pinnate-leaved ornamental or timber trees of the genus Fraxinus",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "ash tree"
+      ],
+      "typeOf": [
+        "tree"
+      ],
+      "hasTypes": [
+        "oregon ash",
+        "fraxinus oregona",
+        "fraxinus ornus",
+        "fraxinus pennsylvanica",
+        "fraxinus quadrangulata",
+        "fraxinus texensis",
+        "fraxinus tomentosa",
+        "fraxinus velutina",
+        "hoop ash",
+        "manna ash",
+        "mountain ash",
+        "arizona ash",
+        "pumpkin ash",
+        "red ash",
+        "swamp ash",
+        "white ash",
+        "basket ash",
+        "black ash",
+        "blue ash",
+        "brown ash",
+        "common european ash",
+        "downy ash",
+        "european ash",
+        "flowering ash",
+        "fraxinus americana",
+        "fraxinus caroliniana",
+        "fraxinus cuspidata",
+        "fraxinus dipetala",
+        "fraxinus excelsior",
+        "fraxinus latifolia",
+        "fraxinus nigra"
+      ],
+      "hasInstances": [
+        "ygdrasil",
+        "yggdrasil"
+      ],
+      "memberOf": [
+        "genus fraxinus",
+        "fraxinus"
+      ],
+      "hasParts": [
+        "ash-key"
+      ]
+    },
+    {
+      "definition": "convert into ashes",
+      "partOfSpeech": "verb",
+      "typeOf": [
+        "alter",
+        "change",
+        "modify"
+      ]
+    },
+    {
+      "definition": "strong elastic wood of any of various ash trees; used for furniture and tool handles and sporting goods such as baseball bats",
+      "partOfSpeech": "noun",
+      "typeOf": [
+        "wood"
+      ],
+      "substanceOf": [
+        "ash tree"
+      ]
+    },
+    {
+      "definition": "the residue that remains when something is burned",
+      "partOfSpeech": "noun",
+      "typeOf": [
+        "residue"
+      ],
+      "hasTypes": [
+        "fly ash",
+        "bone ash"
+      ],
+      "derivation": [
+        "ashy"
+      ]
+    }
+  ],
+  "syllables": {
+    "count": 1,
+    "list": [
+      "ash"
+    ]
+  },
+  "pronunciation": {
+    "all": "æʃ"
+  },
+  "frequency": 3.96
+}
