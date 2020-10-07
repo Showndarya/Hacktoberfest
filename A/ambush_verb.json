@@ -1,0 +1,66 @@
+{
+  "word": "ambush",
+  "results": [
+    {
+      "definition": "hunt (quarry) by stalking and ambushing",
+      "partOfSpeech": "verb",
+      "synonyms": [
+        "still-hunt"
+      ],
+      "typeOf": [
+        "hunt down",
+        "run",
+        "track down",
+        "hunt"
+      ],
+      "derivation": [
+        "ambusher"
+      ]
+    },
+    {
+      "definition": "wait in hiding to attack",
+      "partOfSpeech": "verb",
+      "synonyms": [
+        "ambuscade",
+        "bushwhack",
+        "lie in wait",
+        "lurk",
+        "scupper",
+        "waylay"
+      ],
+      "typeOf": [
+        "wait"
+      ],
+      "derivation": [
+        "ambusher"
+      ]
+    },
+    {
+      "definition": "the act of concealing yourself and lying in wait to attack by surprise",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "ambuscade",
+        "lying in wait",
+        "trap"
+      ],
+      "typeOf": [
+        "coup de main",
+        "surprise attack"
+      ],
+      "hasTypes": [
+        "dry-gulching"
+      ]
+    }
+  ],
+  "syllables": {
+    "count": 2,
+    "list": [
+      "am",
+      "bush"
+    ]
+  },
+  "pronunciation": {
+    "all": "'æmbʊʃ"
+  },
+  "frequency": 3.67
+}
