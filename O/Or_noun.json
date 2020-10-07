@@ -1,0 +1,8 @@
+{
+    "word": "Or",
+    "definitions": [
+        "A logical operation which gives the value one if at least one operand has the value one, and otherwise gives a value of zero.",
+        "Denoting a gate circuit which produces an output if there is a signal on any of its inputs."
+    ],
+    "parts-of-speech": "Noun"
+}

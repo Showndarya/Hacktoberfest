@@ -1,0 +1,9 @@
+
+newIssueWelcomeComment: >
+  Thanks for opening your first issue here! Be sure to follow the issue templates.
+
+newPRWelcomeComment: >
+  Thanks for opening your first pull request here! Please check out CONTRIBUTING.md if the test fails.
+  
+firstPRMergeComment: >
+  Thanks for contributing. Kudos to your first Pull Request merged!

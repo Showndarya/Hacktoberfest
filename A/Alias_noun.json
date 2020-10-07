@@ -1,0 +1,9 @@
+{
+    "word": "Alias",
+    "definitions": [
+        "A false or assumed identity.",
+        "An alternative name or label that refers to a file, command, address, or other item, and can be used to locate or access it.",
+        "Each of a set of signal frequencies which, when sampled at a given uniform rate, would give the same set of sampled values, and thus might be incorrectly substituted for one another when reconstructing the original signal."
+    ],
+    "parts-of-speech": "Noun"
+}
