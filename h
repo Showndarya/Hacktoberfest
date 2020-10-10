@@ -5,3 +5,4 @@
     ],
     "parts-of-speech": "adjective"
 }
+# thanks for help pleass dont reject
