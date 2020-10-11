@@ -1,0 +1,8 @@
+#include<iostream>          //Header file
+using namespace std;        // for starndard
+
+int main()                // main function
+{
+  cout<<"Hello World";     // Output "Hello World"
+  return 0;                // returning a int value
+}
