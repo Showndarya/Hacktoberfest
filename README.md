@@ -8,9 +8,9 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/Showndarya/Hacktoberfest.svg)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Showndarya/Hacktoberfest.svg)](http://isitmaintained.com/project/Showndarya/Hacktoberfest "Average time to resolve an issue")
 
-# Vocabulary Builder :book:
+# Vocabulary Builder :book: -an amazing project
 
-An exhaustive collection of words as json files for easy access.
+An exhaustive collection of words as json files for easy access.made with love
 
 
 ## How to contribute 
@@ -51,3 +51,5 @@ path: `B/Beautiful.json` (first letter needs to be capitalized)
 ## Hall of Fame :fire:
 
 Check out the [Hall of Fame](https://showndarya.github.io/Hacktoberfest/Contributors_Page_Source/) for a list of contributors with a minimum of one commit with their gravatar. To know more about a contributor, click on the gravatar to go to their github profile.
+
+if you have problems with softwares- please contuct us!!
