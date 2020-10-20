@@ -38,3 +38,5 @@ Thumbs.db
 .svn
 .svn/
 CVS
+
+env/
