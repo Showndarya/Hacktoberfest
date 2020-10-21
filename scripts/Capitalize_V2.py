@@ -13,6 +13,9 @@ for dir_name in dir_list:
 
             if file.islower():
                 new_name = os.path.join(subdir, file.capitalize())
+                if not new_name.endswith(".json"):
+                	new_name += ".json"
+
                 print('=================================')
                 print(f'Old filename {old_name}')
                 print(f'New filename {new_name}')
