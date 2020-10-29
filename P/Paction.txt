@@ -1,0 +1,7 @@
+{
+    "word": "Paction",
+    "definitions": [
+        "an agreement or bargain"
+    ],
+    "parts-of-speech": "Noun"
+}
