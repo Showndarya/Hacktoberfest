@@ -1,0 +1,7 @@
+{
+    "word": "Penne",
+    "definitions": [
+        "pasta in the form of short wide tubes."
+    ],
+    "parts-of-speech": "Noun"
+}
