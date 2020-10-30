@@ -1,0 +1,15 @@
+REFERENCES
+
+[1] Dong-Gyu Lee, Heung-Il Suk, Sung-Kee Park and Seong-Whan Lee “Motion Influence Map for Unusual Human Activity Detection and Localization in Crowded Scenes” IEEE transactions on circuits and systems for video technology, vol. 25, no. 10, October 2015
+
+[2] Data set – http://mha.cs.umn.edu/Movies/Crowd-Activity-All.avi
+
+[3] Data set - http://www.svcl.ucsd.edu/projects/anomaly/
+
+[4]  T. Xiang and S. Gong, “Video behavior profiling for anomaly detection,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 30, no. 5, pp. 893–908, May 2008.
+
+[5] F. Jiang, J. Yuan, S. A. Tsaftaris, and A. K. Katsaggelos, “Anomalous video event detection using spatiotemporal context,” Comput. Vis. Image Understand., vol. 115, no. 3, pp. 323–333, 2011.
+[6] B. D. Lucas and T. Kanade, “An iterative image registration technique with an application to stereo vision,” in Proc. 7th Int. Joint Conf. Artif. Intell., San Francisco, CA, USA, Aug. 1981, pp. 674–679.
+[7] OpenCV Python documentation at http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html 
+
+[8] OpenCV references at  http://opencv-python-tutroals.readthedocs.io/en/latest/ 
