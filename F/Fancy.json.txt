@@ -1,0 +1,9 @@
+{
+  "word": "Fancy",
+  "definitions": [
+    "not plain or ordinary",
+    "very expensive and fashionable",
+    "done with great skill and grace"
+  ],
+  "parts-of-speech": "Adjective"
+}
