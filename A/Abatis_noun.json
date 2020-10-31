@@ -1,7 +1,7 @@
 {
-    "word": "Abatis",
+    "word": ["Abatis","Einstien"]
     "definitions": [
-        "A defence made of felled trees placed lengthwise over each other with the boughs pointing outwards."
+        "A defence made of felled trees placed lengthwise over each other with the boughs pointing outwards.","A genius mostly known for his famous equation E = mc^2
     ],
     "parts-of-speech": "Noun"
 }
