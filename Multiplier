@@ -1,0 +1,12 @@
+print("Hello I am Scooby Doo")
+UserName = input("And who are you?")
+print ("Nice to meet you, {}" .format(UserName))
+Number = int(input("Give me any number and I wil give you its multiplication table till 10."))
+x = 1
+while x<=10 :
+    Product = Number*x
+    print("{} X {} = {}" .format(Number,x,Product))
+    x= x+1
+print ("Well, here you go.")
+print("If you have any other problem,contact me, OK?")
+exit = int(input("Now please enter any number to exit. "))
