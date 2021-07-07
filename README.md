@@ -18,7 +18,9 @@ An exhaustive collection of words as json files for easy access.
 > [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/blob/master/CONTRIBUTING.md)
 
 
-## Create your first pull request :sunglasses:
+## Create your first pull request :sunglasses: 
+
+> Star this repository⭐
 
 > [Fork this repository](https://help.github.com/articles/fork-a-repo/)
 
