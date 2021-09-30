@@ -1,0 +1,8 @@
+{
+    "word": "BitBanged",
+    "definitions": [
+      "In computer engineering and electrical engineering, bit banging is slang for any method of data transmission that employs software as a substitute for dedicated hardware to generate transmitted signals or process received signals.",
+      "Transmission of data on a serial line, when accomplished by rapidly tweaking a single output bit, in software, at the appropriate times."
+     ],
+    "parts-of-speech": "Noun"
+}
