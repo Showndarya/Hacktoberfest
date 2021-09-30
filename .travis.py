@@ -80,3 +80,4 @@ for changed_file_json in changed_files_json:
 
 if there_was_an_error:
     exit(1)
+print("hi"0)
