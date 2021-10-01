@@ -10,7 +10,7 @@
 
 # Vocabulary Builder :book:
 
-An exhaustive collection of words as json files for easy access.
+This is an exhaustive collection of words as json files for easy access.
 
 
 ## How to contribute 
