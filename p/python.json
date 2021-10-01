@@ -1,0 +1,7 @@
+import json
+x = {
+  "word": "python",
+  "meaning": "an interpreted high-level general-purpose programming language",
+  "definition": "It is designed to be easy to read and simple to implement. It is open source, which means it is free to use, even for commercial applications.",
+  "uses":" Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
+}
