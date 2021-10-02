@@ -2,7 +2,9 @@
     "word": "Soap",
     "definitions": [
         "A substance used with water for washing and cleaning, made of a compound of natural oils or fats with sodium hydroxide or another strong alkali, and typically having perfume and colouring added.",
-        "A soap opera."
+        "A soap opera.",
+	"A messaging protocol specification for exchanging structured information in the implementation of web services in computer networks."
+
     ],
     "parts-of-speech": "Noun"
 }
