@@ -1,7 +1,7 @@
 {
-    "word": "Vacation",
-    "definitions": [
+    'word': "Vacation",
+    'definitions': [
         "Take a holiday."
     ],
-    "parts-of-speech": "Verb"
+    'parts-of-speech': "Verb"
 }
