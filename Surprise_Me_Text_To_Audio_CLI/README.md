@@ -11,6 +11,7 @@ A command line tool to convert random JSON files in this repository to audio
 
 ### Supported OS
 Ubuntu
+Windows 10
 
 ### Prerequisites
 

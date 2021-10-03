@@ -12,9 +12,11 @@
 
 An exhaustive collection of words as json files for easy access.
 
+
 ## How to contribute 
 
 > [Refer the template provided below to add your word](https://github.com/Showndarya/Hacktoberfest/blob/master/CONTRIBUTING.md)
+
 
 ## Create your first pull request :sunglasses:
 
@@ -28,7 +30,7 @@ An exhaustive collection of words as json files for easy access.
 
 > [Create a pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
 
-## Example file
+## Example file 🎃
 path: `B/Beautiful.json` (first letter needs to be capitalized)
 ```json
 {

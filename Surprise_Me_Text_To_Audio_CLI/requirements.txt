@@ -1,1 +1,2 @@
 pyttsx3
+pypiwin32

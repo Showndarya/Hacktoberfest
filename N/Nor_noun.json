@@ -1,0 +1,8 @@
+{
+    "word": "Nor",
+    "definitions": [
+        "A Boolean operator which gives the value one if and only if all operands have a value of zero and otherwise has a value of zero.",
+        "A circuit which produces an output signal only when there are no signals on any of the input connections."
+    ],
+    "parts-of-speech": "Noun"
+}
