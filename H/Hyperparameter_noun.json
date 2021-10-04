@@ -1,8 +1,0 @@
-{
-    "word": "Hyperparameter",
-    "definitions": [
-        "In machine learning, a hyperparameter is a parameter whose value is set before the learning process begins.",
-        "In Bayesian statistics, a parameter of a prior (as distinguished from parameters of the model for the underlying system under analysis)."
-    ],
-    "parts-of-speech": "Noun"
-}
