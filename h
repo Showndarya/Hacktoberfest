@@ -5,3 +5,8 @@
     ],
     "parts-of-speech": "adjective"
 }
+{
+    "word":"guru"
+    "definitions":[guru means teacher in hindi],
+    "parts-of-speech":"Adjective"
+}
