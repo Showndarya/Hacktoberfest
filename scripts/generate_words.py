@@ -122,4 +122,4 @@ if __name__== "__main__":
         get_words_starting_with('ap')    
     """
 
-    get_words_starting_with('Y', limit=20)
+    get_words_starting_with('Y', limit=30)
