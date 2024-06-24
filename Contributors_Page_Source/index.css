@@ -1,7 +1,7 @@
 body {
      background-color: #303030;
-     padding: 0px;
-     margin: 0px;
+     padding: 30px;
+     margin: 30px;
      color: #E8E8E8;
 }
  
@@ -29,4 +29,3 @@ h3 {
 #wrap {
 	min-height: 55vh;
 }
-
