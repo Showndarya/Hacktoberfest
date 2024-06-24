@@ -1,3 +1,5 @@
+#Import the dependenices
+
 import json
 import operator
 import os
@@ -80,3 +82,4 @@ for changed_file_json in changed_files_json:
 
 if there_was_an_error:
     exit(1)
+print("Hacktober fest")
