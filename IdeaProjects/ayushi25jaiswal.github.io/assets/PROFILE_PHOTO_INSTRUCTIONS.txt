@@ -1,0 +1,1 @@
+Add your own profile photo here named profile.jpg. The website automatically displays assets/profile.jpg if present.
